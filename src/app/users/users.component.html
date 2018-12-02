@@ -3,5 +3,8 @@
   [enableSorting]="true"
   [enableFilter]="true"
   [rowData]="rowData"
-  [columnDefs]="columnDefs">
+  [columnDefs]="columnDefs"
+  (gridReady)="gridReady($event)">
 </ag-grid-angular>
+
+<pre>{{ rowData | json }}</pre>
