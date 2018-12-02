@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AgGridVendorModule } from './vendor/ag-grid.module';
+import { AgGridVendorModule } from './ag-grid/ag-grid.module';
 import { MaterialVendorModule } from './vendor/material.module';
 import { UsersComponent } from './users/users.component';
 
