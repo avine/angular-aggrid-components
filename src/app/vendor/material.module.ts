@@ -10,4 +10,4 @@ const components = [
   imports: components,
   exports: components,
 })
-export class AppVendorModule { }
+export class MaterialVendorModule { }
