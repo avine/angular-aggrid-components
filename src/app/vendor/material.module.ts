@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatCheckboxModule, MatIconModule } from '@angular/material';
 
 const components = [
-  MatButtonModule,
+  MatIconModule,
   MatCheckboxModule
 ];
 
 @NgModule({
   imports: components,
-  exports: components,
+  exports: components
 })
 export class MaterialVendorModule { }

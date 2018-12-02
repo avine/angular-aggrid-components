@@ -13,7 +13,19 @@ export class UsersComponent implements OnInit {
     { field: 'firstName' },
     { field: 'lastName' },
     { field: 'email' },
-    { field: 'disabled' },
+    {
+      field: 'disabled',
+      editable: true,
+      valueSetter: (params) => {
+        const newValue = params.newValue.toLowerCase();
+        if (['yes', 'no', 'y', 'n'].indexOf(newValue) !== -1) {
+          params.data.disabled = newValue.substr(0, 1) === 'y' ? true : false;
+          return true;
+        }
+        return false;
+      },
+      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No'
+    },
   ];
 
   rowData = [
