@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
 
-import { BooleanCellEditorComponent } from '../../ag-grid/boolean-cell-editor/boolean-cell-editor.component';
-import { BooleanCellRendererComponent } from '../../ag-grid/boolean-cell-renderer/boolean-cell-renderer.component';
+import { BooleanCellEditorComponent } from '@app/ag-grid/boolean-cell-editor/boolean-cell-editor.component';
+import { BooleanCellRendererComponent } from '@app/ag-grid/boolean-cell-renderer/boolean-cell-renderer.component';
 
 @Component({
   selector: 'app-users',

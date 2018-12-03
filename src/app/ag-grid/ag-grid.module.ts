@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AgGridModule } from 'ag-grid-angular';
 
-import { MaterialVendorModule } from '../shared/material.module';
+import { MaterialVendorModule } from '@app/shared/material.module';
 import { BooleanCellEditorComponent } from './boolean-cell-editor/boolean-cell-editor.component';
 import { BooleanCellRendererComponent } from './boolean-cell-renderer/boolean-cell-renderer.component';
 
