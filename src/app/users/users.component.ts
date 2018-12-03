@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GridOptions } from 'ag-grid-community';
 
+import { BooleanCellEditorComponent } from '../ag-grid/boolean-cell-editor/boolean-cell-editor.component';
 import { BooleanCellRendererComponent } from '../ag-grid/boolean-cell-renderer/boolean-cell-renderer.component';
-
 
 @Component({
   selector: 'app-users',
@@ -13,7 +13,8 @@ export class UsersComponent implements OnInit {
   gridOptions: GridOptions;
 
   frameworkComponents = {
-    booleanCellRenderer: BooleanCellRendererComponent
+    booleanCellRenderer: BooleanCellRendererComponent,
+    booleanCellEditor: BooleanCellEditorComponent
   };
 
   columnDefs = [
@@ -23,7 +24,7 @@ export class UsersComponent implements OnInit {
     {
       field: 'disabled',
       editable: true,
-      valueSetter: (params) => {
+      /*valueSetter: (params) => {
         const newValue = params.newValue.toLowerCase();
         if (['yes', 'no', 'y', 'n'].indexOf(newValue) !== -1) {
           params.data.disabled = newValue.substr(0, 1) === 'y' ? true : false;
@@ -31,8 +32,10 @@ export class UsersComponent implements OnInit {
         }
         return false;
       },
-      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No',
+      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No',*/
       cellRenderer: 'booleanCellRenderer',
+      cellEditor: 'booleanCellEditor',
+      singleClickEdit: true
     },
   ];
 
