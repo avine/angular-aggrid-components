@@ -1,9 +1,11 @@
+import { GridOptions } from 'ag-grid-community';
+
 import { Component, OnInit } from '@angular/core';
 import { BooleanEditorComponent } from '@app/ag-grid/boolean-editor/boolean-editor.component';
 import { BooleanRendererComponent } from '@app/ag-grid/boolean-renderer/boolean-renderer.component';
+import { RoleEditorComponent } from '@app/ag-grid/role-editor/role-editor.component';
 import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
-import { GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-users-v2',
@@ -14,8 +16,9 @@ export class UsersV2Component implements OnInit {
   gridOptions: GridOptions;
 
   frameworkComponents = {
-    booleanCellRenderer: BooleanRendererComponent,
-    booleanCellEditor: BooleanEditorComponent
+    booleanRenderer: BooleanRendererComponent,
+    booleanEditor: BooleanEditorComponent,
+    roleEditor: RoleEditorComponent
   };
 
   columnDefs = [
@@ -34,25 +37,14 @@ export class UsersV2Component implements OnInit {
     {
       field: 'role',
       editable: true,
-      cellEditor: 'agSelectCellEditor',
-      cellEditorParams: {
-        values: ROLES
-      }
+      cellEditor: 'roleEditor',
+      cellEditorParams: { values: ROLES }
     },
     {
       field: 'disabled',
       editable: true,
-      /*valueSetter: (params) => {
-        const newValue = params.newValue.toLowerCase();
-        if (['yes', 'no', 'y', 'n'].indexOf(newValue) !== -1) {
-          params.data.disabled = newValue.substr(0, 1) === 'y' ? true : false;
-          return true;
-        }
-        return false;
-      },
-      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No',*/
-      cellRenderer: 'booleanCellRenderer',
-      cellEditor: 'booleanCellEditor',
+      cellRenderer: 'booleanRenderer',
+      cellEditor: 'booleanEditor',
       singleClickEdit: true
     },
   ];

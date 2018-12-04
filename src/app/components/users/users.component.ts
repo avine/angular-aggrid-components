@@ -28,9 +28,7 @@ export class UsersComponent implements OnInit {
       field: 'role',
       editable: true,
       cellEditor: 'agSelectCellEditor',
-      cellEditorParams: {
-        values: ROLES
-      }
+      cellEditorParams: { values: ROLES }
     },
     {
       field: 'disabled',

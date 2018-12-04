@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
-import { MatCheckboxModule, MatIconModule, MatRippleModule, MatSlideToggleModule } from '@angular/material';
+import {
+    MatCheckboxModule, MatFormFieldModule, MatIconModule, MatOptionModule, MatRippleModule, MatSelectModule, MatSlideToggleModule
+} from '@angular/material';
 
 const components = [
   MatCheckboxModule,
+  MatFormFieldModule,
   MatIconModule,
+  MatOptionModule,
   MatRippleModule,
-  MatSlideToggleModule
+  MatSelectModule,
+  MatSlideToggleModule,
 ];
 
 @NgModule({

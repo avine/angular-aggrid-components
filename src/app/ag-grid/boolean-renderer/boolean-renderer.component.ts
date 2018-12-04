@@ -10,8 +10,6 @@ import { ICellRendererParams } from 'ag-grid-community';
 export class BooleanRendererComponent implements ICellRendererAngularComp {
   disabled: boolean;
 
-  constructor() { }
-
   agInit(params: ICellRendererParams) {
     this.disabled = params.data.disabled;
   }

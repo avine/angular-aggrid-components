@@ -10,8 +10,6 @@ import { ICellEditorParams } from 'ag-grid-community';
 export class BooleanEditorComponent implements ICellEditorAngularComp {
   params: ICellEditorParams;
 
-  constructor() { }
-
   agInit(params: ICellEditorParams) {
     this.params = params;
     setTimeout(() => this.params.api.stopEditing(), 250);
