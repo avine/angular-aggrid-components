@@ -13,24 +13,29 @@ export class UsersComponent implements OnInit {
 
   columnDefs = [
     {
+      headerName: 'First name',
       field: 'firstName',
       editable: true,
     },
     {
+      headerName: 'Last name',
       field: 'lastName',
       editable: true
     },
     {
+      headerName: 'Email',
       field: 'email',
       editable: true
     },
     {
+      headerName: 'Role',
       field: 'role',
       editable: true,
       cellEditor: 'agSelectCellEditor',
       cellEditorParams: { values: ROLES }
     },
     {
+      headerName: 'Disabled',
       field: 'disabled',
       editable: true,
       valueSetter: (params) => {

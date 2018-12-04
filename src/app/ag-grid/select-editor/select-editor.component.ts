@@ -18,7 +18,8 @@ export class SelectEditorComponent implements ICellEditorAngularComp {
 
   agInit(params: ICellEditorParams) {
     this.params = params;
-    this.placeholder = params.column.getColDef().field;
+    const colDef = params.column.getColDef();
+    this.placeholder = colDef.headerName || colDef.field;
     this.values = params['values'];
     this.selectedValue = params.value;
   }

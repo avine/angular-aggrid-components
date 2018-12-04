@@ -25,26 +25,31 @@ export class UsersV2Component implements OnInit {
 
   columnDefs = [
     {
+      headerName: 'First name',
       field: 'firstName',
       editable: true,
       cellEditor: 'textEditor'
     },
     {
+      headerName: 'Last name',
       field: 'lastName',
       editable: true,
       cellEditor: 'textEditor'
     },
     {
+      headerName: 'Email',
       field: 'email',
       editable: true
     },
     {
+      headerName: 'Role',
       field: 'role',
       editable: true,
       cellEditor: 'roleEditor',
       cellEditorParams: { values: ROLES }
     },
     {
+      headerName: 'Disabled',
       field: 'disabled',
       editable: true,
       cellRenderer: 'booleanRenderer',
