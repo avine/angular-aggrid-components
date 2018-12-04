@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BooleanCellEditorComponent } from '@app/ag-grid/boolean-cell-editor/boolean-cell-editor.component';
-import { BooleanCellRendererComponent } from '@app/ag-grid/boolean-cell-renderer/boolean-cell-renderer.component';
+import { BooleanEditorComponent } from '@app/ag-grid/boolean-editor/boolean-editor.component';
+import { BooleanRendererComponent } from '@app/ag-grid/boolean-renderer/boolean-renderer.component';
 import { User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
 import { GridOptions } from 'ag-grid-community';
@@ -14,8 +14,8 @@ export class UsersComponent implements OnInit {
   gridOptions: GridOptions;
 
   frameworkComponents = {
-    booleanCellRenderer: BooleanCellRendererComponent,
-    booleanCellEditor: BooleanCellEditorComponent
+    booleanCellRenderer: BooleanRendererComponent,
+    booleanCellEditor: BooleanEditorComponent
   };
 
   columnDefs = [

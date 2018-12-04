@@ -3,11 +3,11 @@ import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
 
 @Component({
-  selector: 'app-boolean-cell-renderer',
-  templateUrl: './boolean-cell-renderer.component.html',
-  styleUrls: ['./boolean-cell-renderer.component.scss']
+  selector: 'app-boolean-renderer',
+  templateUrl: './boolean-renderer.component.html',
+  styleUrls: ['./boolean-renderer.component.scss']
 })
-export class BooleanCellRendererComponent implements ICellRendererAngularComp {
+export class BooleanRendererComponent implements ICellRendererAngularComp {
   disabled: boolean;
 
   constructor() { }

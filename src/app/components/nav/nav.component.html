@@ -1,0 +1,10 @@
+<nav class="app-nav__container">
+  <a
+    *ngFor="let link of links"
+    class="app-nav__link"
+    matRipple
+    [matRippleCentered]="true"
+    [matRippleRadius]="20"
+    [routerLink]="link"
+    routerLinkActive="app-nav__link--active">V1</a>
+</nav>

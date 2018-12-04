@@ -3,11 +3,11 @@ import { ICellEditorAngularComp } from 'ag-grid-angular';
 import { ICellEditorParams } from 'ag-grid-community';
 
 @Component({
-  selector: 'app-boolean-cell-editor',
-  templateUrl: './boolean-cell-editor.component.html',
-  styleUrls: ['./boolean-cell-editor.component.scss']
+  selector: 'app-boolean-editor',
+  templateUrl: './boolean-editor.component.html',
+  styleUrls: ['./boolean-editor.component.scss']
 })
-export class BooleanCellEditorComponent implements ICellEditorAngularComp {
+export class BooleanEditorComponent implements ICellEditorAngularComp {
   params: ICellEditorParams;
 
   constructor() { }

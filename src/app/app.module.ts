@@ -7,11 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { MaterialVendorModule } from './shared/material.module';
+import { UsersV2Component } from './components/users-v2/users-v2.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    UsersV2Component,
+    NavComponent
   ],
   imports: [
     BrowserModule,

@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { MaterialVendorModule } from '@app/shared/material.module';
-import { BooleanCellEditorComponent } from './boolean-cell-editor/boolean-cell-editor.component';
-import { BooleanCellRendererComponent } from './boolean-cell-renderer/boolean-cell-renderer.component';
+import { BooleanEditorComponent } from './boolean-editor/boolean-editor.component';
+import { BooleanRendererComponent } from './boolean-renderer/boolean-renderer.component';
 
 const components = [
-  BooleanCellRendererComponent,
-  BooleanCellEditorComponent,
+  BooleanRendererComponent,
+  BooleanEditorComponent,
 ];
 
 @NgModule({

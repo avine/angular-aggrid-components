@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BooleanCellEditorComponent } from './boolean-cell-editor.component';
+import { NavComponent } from './nav.component';
 
-describe('BooleanCellEditorComponent', () => {
-  let component: BooleanCellEditorComponent;
-  let fixture: ComponentFixture<BooleanCellEditorComponent>;
+describe('NavComponent', () => {
+  let component: NavComponent;
+  let fixture: ComponentFixture<NavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BooleanCellEditorComponent ]
+      declarations: [ NavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BooleanCellEditorComponent);
+    fixture = TestBed.createComponent(NavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
