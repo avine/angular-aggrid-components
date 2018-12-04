@@ -1,3 +1,11 @@
-<p>
-  users-v2 works!
-</p>
+<ag-grid-angular
+  class="ag-theme-material app-users-v2__grid"
+  [enableSorting]="true"
+  [enableFilter]="true"
+  [frameworkComponents]="frameworkComponents"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  (gridReady)="gridReady($event)">
+</ag-grid-angular>
+
+<pre>{{ rowData | json }}</pre>
