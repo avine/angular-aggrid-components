@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RoleEditorComponent } from './role-editor.component';
+import { SelectEditorComponent } from './select-editor.component';
 
-describe('RoleEditorComponent', () => {
-  let component: RoleEditorComponent;
-  let fixture: ComponentFixture<RoleEditorComponent>;
+describe('SelectEditorComponent', () => {
+  let component: SelectEditorComponent;
+  let fixture: ComponentFixture<SelectEditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RoleEditorComponent ]
+      declarations: [ SelectEditorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RoleEditorComponent);
+    fixture = TestBed.createComponent(SelectEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

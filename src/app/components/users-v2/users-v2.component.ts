@@ -3,7 +3,7 @@ import { GridOptions } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
 import { BooleanEditorComponent } from '@app/ag-grid/boolean-editor/boolean-editor.component';
 import { BooleanRendererComponent } from '@app/ag-grid/boolean-renderer/boolean-renderer.component';
-import { RoleEditorComponent } from '@app/ag-grid/role-editor/role-editor.component';
+import { SelectEditorComponent } from '@app/ag-grid/select-editor/select-editor.component';
 import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
 
@@ -18,7 +18,7 @@ export class UsersV2Component implements OnInit {
   frameworkComponents = {
     booleanRenderer: BooleanRendererComponent,
     booleanEditor: BooleanEditorComponent,
-    roleEditor: RoleEditorComponent
+    roleEditor: SelectEditorComponent
   };
 
   columnDefs = [
