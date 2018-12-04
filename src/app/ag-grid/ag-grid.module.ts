@@ -7,11 +7,13 @@ import { MaterialVendorModule } from '@app/shared/material.module';
 import { BooleanEditorComponent } from './boolean-editor/boolean-editor.component';
 import { BooleanRendererComponent } from './boolean-renderer/boolean-renderer.component';
 import { SelectEditorComponent } from './select-editor/select-editor.component';
+import { TextEditorComponent } from './text-editor/text-editor.component';
 
 const components = [
   BooleanRendererComponent,
   BooleanEditorComponent,
-  SelectEditorComponent
+  SelectEditorComponent,
+  TextEditorComponent
 ];
 
 @NgModule({

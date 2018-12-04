@@ -56,7 +56,7 @@ export class UsersComponent implements OnInit {
 
   gridReady(gridOptions: GridOptions) {
     this.gridOptions = gridOptions;
+    this.gridOptions.api.sizeColumnsToFit();
     this.gridOptions.api.setDomLayout('autoHeight');
-    this.gridOptions.columnApi.autoSizeAllColumns();
   }
 }

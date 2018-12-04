@@ -12,5 +12,12 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+pre {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
 @import "~ag-grid-community/dist/styles/ag-grid.css";
 @import "~ag-grid-community/dist/styles/ag-theme-material.css";
