@@ -10,7 +10,7 @@ const components = [
   MatOptionModule,
   MatRippleModule,
   MatSelectModule,
-  MatSlideToggleModule,
+  MatSlideToggleModule
 ];
 
 @NgModule({

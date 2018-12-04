@@ -1,6 +1,8 @@
 <mat-form-field>
   <mat-select
+    [placeholder]="placeholder"
     [(value)]="selectedValue"
+    (keydown)="keyDown($event)"
     (selectionChange)="change($event)">
     <mat-option
       *ngFor="let value of values"

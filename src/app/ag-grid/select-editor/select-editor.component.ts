@@ -12,17 +12,19 @@ import { MatSelectChange } from '@angular/material';
 export class SelectEditorComponent implements ICellEditorAngularComp {
   params: ICellEditorParams;
 
+  placeholder: string;
   values: string[];
   selectedValue: string;
 
   agInit(params: ICellEditorParams) {
     this.params = params;
+    this.placeholder = params.column.getColDef().field;
     this.values = params['values'];
     this.selectedValue = params.value;
   }
 
   isPopup() {
-    return false;
+    return true;
   }
 
   change(event: MatSelectChange) {
@@ -32,5 +34,9 @@ export class SelectEditorComponent implements ICellEditorAngularComp {
 
   getValue() {
     return this.selectedValue;
+  }
+
+  keyDown(event) {
+    event.stopPropagation();
   }
 }
