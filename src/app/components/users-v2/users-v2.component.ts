@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BooleanEditorComponent } from '@app/ag-grid/boolean-editor/boolean-editor.component';
 import { BooleanRendererComponent } from '@app/ag-grid/boolean-renderer/boolean-renderer.component';
-import { User } from '@app/models/user.model';
+import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
 import { GridOptions } from 'ag-grid-community';
 
@@ -19,9 +19,26 @@ export class UsersV2Component implements OnInit {
   };
 
   columnDefs = [
-    { field: 'firstName' },
-    { field: 'lastName' },
-    { field: 'email' },
+    {
+      field: 'firstName',
+      editable: true,
+    },
+    {
+      field: 'lastName',
+      editable: true
+    },
+    {
+      field: 'email',
+      editable: true
+    },
+    {
+      field: 'role',
+      editable: true,
+      cellEditor: 'agSelectCellEditor',
+      cellEditorParams: {
+        values: ROLES
+      }
+    },
     {
       field: 'disabled',
       editable: true,

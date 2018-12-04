@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '@app/models/user.model';
+import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
 import { GridOptions } from 'ag-grid-community';
 
@@ -12,9 +12,26 @@ export class UsersComponent implements OnInit {
   gridOptions: GridOptions;
 
   columnDefs = [
-    { field: 'firstName' },
-    { field: 'lastName' },
-    { field: 'email' },
+    {
+      field: 'firstName',
+      editable: true,
+    },
+    {
+      field: 'lastName',
+      editable: true
+    },
+    {
+      field: 'email',
+      editable: true
+    },
+    {
+      field: 'role',
+      editable: true,
+      cellEditor: 'agSelectCellEditor',
+      cellEditorParams: {
+        values: ROLES
+      }
+    },
     {
       field: 'disabled',
       editable: true,
