@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { GridOptions } from 'ag-grid-community';
-
 import { BooleanCellEditorComponent } from '@app/ag-grid/boolean-cell-editor/boolean-cell-editor.component';
 import { BooleanCellRendererComponent } from '@app/ag-grid/boolean-cell-renderer/boolean-cell-renderer.component';
+import { User } from '@app/models/user.model';
+import { ApiService } from '@app/services/api.service';
+import { GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-users',
@@ -39,14 +40,12 @@ export class UsersComponent implements OnInit {
     },
   ];
 
-  rowData = [
-    { firstName: 'Stéphane', lastName: 'Francel', email: 'me@gmail.com', disabled: false },
-    { firstName: 'John', lastName: 'Doe', email: 'jdoe@gmail.com', disabled: true },
-  ];
+  rowData: User[];
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.getUsers().subscribe(users => this.rowData = users);
   }
 
   gridReady(gridOptions: GridOptions) {

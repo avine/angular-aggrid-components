@@ -14,7 +14,7 @@ export class BooleanCellEditorComponent implements ICellEditorAngularComp {
 
   agInit(params: ICellEditorParams) {
     this.params = params;
-    setTimeout(() => this.params.api.stopEditing(), 0);
+    setTimeout(() => this.params.api.stopEditing(), 250);
   }
 
   isPopup() {
