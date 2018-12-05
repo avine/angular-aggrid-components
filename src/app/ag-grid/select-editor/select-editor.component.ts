@@ -37,7 +37,12 @@ export class SelectEditorComponent implements ICellEditorAngularComp {
     return this.selectedValue;
   }
 
-  keyDown(event) {
+  /**
+   * Prevent the `mousedown` event (registered on `document`)
+   * to close the "ag-grid" popup before you get a change to
+   * select a new option
+   */
+  mousedown(event) {
     event.stopPropagation();
   }
 }

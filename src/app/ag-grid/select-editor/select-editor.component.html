@@ -2,11 +2,11 @@
   <mat-select
     [placeholder]="placeholder"
     [(value)]="selectedValue"
-    (keydown)="keyDown($event)"
     (selectionChange)="change($event)">
     <mat-option
       *ngFor="let value of values"
-      [value]="value">
+      [value]="value"
+      (mousedown)="mousedown($event)">
       {{ value }}
     </mat-option>
   </mat-select>
