@@ -53,8 +53,7 @@ export class UsersV2Component implements OnInit {
       field: 'disabled',
       editable: true,
       cellRenderer: 'booleanRenderer',
-      cellEditor: 'booleanEditor',
-      singleClickEdit: true
+      cellEditor: 'booleanEditor'
     },
   ];
 

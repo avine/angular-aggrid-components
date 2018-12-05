@@ -12,7 +12,7 @@ export class BooleanEditorComponent implements ICellEditorAngularComp {
 
   agInit(params: ICellEditorParams) {
     this.params = params;
-    setTimeout(() => this.params.stopEditing(), 250);
+    setTimeout(() => this.params.stopEditing(), 200);
   }
 
   isPopup() {
