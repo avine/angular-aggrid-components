@@ -8,10 +8,10 @@ import { ICellRendererParams } from 'ag-grid-community';
   styleUrls: ['./boolean-renderer.component.scss']
 })
 export class BooleanRendererComponent implements ICellRendererAngularComp {
-  disabled: boolean;
+  value: boolean;
 
   agInit(params: ICellRendererParams) {
-    this.disabled = params.data.disabled;
+    this.value = params.value;
   }
 
   refresh() {
