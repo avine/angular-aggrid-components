@@ -8,16 +8,18 @@ body {
 body {
   box-sizing: border-box;
   margin: 0;
-  padding: 2rem;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;
 }
 
 pre {
+  padding: 1rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05) inset;
   border-radius: 3px;
   border: 1px solid #ddd;
-  background-color: #f5f5f5;
-  padding: 1rem;
+  background-color: #f5f2f0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
 }
 
 @import "~ag-grid-community/dist/styles/ag-grid.css";
