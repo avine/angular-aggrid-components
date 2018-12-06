@@ -1,0 +1,15 @@
+<div class="app-text-filter__container">
+  <mat-form-field>
+    <input #field
+      matInput
+      [placeholder]="placeholder"
+      [(ngModel)]="text"
+      (ngModelChange)="change()">
+  </mat-form-field>
+
+  <mat-checkbox
+    [(ngModel)]="caseSensitive"
+    (ngModelChange)="change()">
+    Case sensitive
+  </mat-checkbox>
+</div>

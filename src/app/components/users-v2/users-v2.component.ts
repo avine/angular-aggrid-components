@@ -1,12 +1,14 @@
-import { GridOptions } from 'ag-grid-community';
-
 import { Component, OnInit } from '@angular/core';
-import { BooleanEditorComponent } from '@app/ag-grid/boolean-editor/boolean-editor.component';
-import { BooleanRendererComponent } from '@app/ag-grid/boolean-renderer/boolean-renderer.component';
-import { SelectEditorComponent } from '@app/ag-grid/select-editor/select-editor.component';
-import { TextEditorComponent } from '@app/ag-grid/text-editor/text-editor.component';
+import {
+  BooleanEditorComponent,
+  BooleanRendererComponent,
+  SelectEditorComponent,
+  TextEditorComponent,
+  TextFilterComponent,
+} from '@app/ag-grid';
 import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
+import { GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-users-v2',
@@ -20,7 +22,8 @@ export class UsersV2Component implements OnInit {
     booleanRenderer: BooleanRendererComponent,
     booleanEditor: BooleanEditorComponent,
     roleEditor: SelectEditorComponent,
-    textEditor: TextEditorComponent
+    textEditor: TextEditorComponent,
+    textFilter: TextFilterComponent
   };
 
   columnDefs = [
@@ -28,25 +31,29 @@ export class UsersV2Component implements OnInit {
       headerName: 'First name',
       field: 'firstName',
       editable: true,
-      cellEditor: 'textEditor'
+      cellEditor: 'textEditor',
+      filter: 'textFilter'
     },
     {
       headerName: 'Last name',
       field: 'lastName',
       editable: true,
-      cellEditor: 'textEditor'
+      cellEditor: 'textEditor',
+      filter: 'textFilter'
     },
     {
       headerName: 'Email',
       field: 'email',
-      editable: true
+      editable: true,
+      filter: 'textFilter'
     },
     {
       headerName: 'Role',
       field: 'role',
       editable: true,
       cellEditor: 'roleEditor',
-      cellEditorParams: { values: ROLES }
+      cellEditorParams: { values: ROLES },
+      filter: 'textFilter' // TODO: replace by a custom `RoleFilter`...
     },
     {
       headerName: 'Disabled',
@@ -54,6 +61,7 @@ export class UsersV2Component implements OnInit {
       editable: true,
       cellRenderer: 'booleanRenderer',
       cellEditor: 'booleanEditor'
+      // filter: ??? // TODO: make a `BooleanFilter`...
     },
   ];
 

@@ -1,20 +1,10 @@
-import { AgGridModule } from 'ag-grid-angular';
-
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MaterialVendorModule } from '@app/shared/material.module';
+import { AgGridModule } from 'ag-grid-angular';
 
-import { BooleanEditorComponent } from './boolean-editor/boolean-editor.component';
-import { BooleanRendererComponent } from './boolean-renderer/boolean-renderer.component';
-import { SelectEditorComponent } from './select-editor/select-editor.component';
-import { TextEditorComponent } from './text-editor/text-editor.component';
-
-const components = [
-  BooleanRendererComponent,
-  BooleanEditorComponent,
-  SelectEditorComponent,
-  TextEditorComponent
-];
+import { components } from '.';
 
 @NgModule({
   declarations: [
@@ -22,6 +12,7 @@ const components = [
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MaterialVendorModule,
     AgGridModule.withComponents(components)
   ],

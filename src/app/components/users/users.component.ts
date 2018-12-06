@@ -46,8 +46,7 @@ export class UsersComponent implements OnInit {
         }
         return false;
       },
-      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No',
-      singleClickEdit: true
+      valueGetter: (params) => params.data.disabled ? 'Yes' : 'No'
     },
   ];
 
