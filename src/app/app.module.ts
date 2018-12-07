@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { UsersV2Component } from './components/users-v2/users-v2.component';
 import { UsersComponent } from './components/users/users.component';
 import { WidgetInputEditableComponent } from './components/widget-input-editable/widget-input-editable.component';
+import { WidgetSelectEditableComponent } from './components/widget-select-editable/widget-select-editable.component';
 import { MaterialVendorModule } from './shared/material.module';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MaterialVendorModule } from './shared/material.module';
     UsersComponent,
     UsersV2Component,
     MatGridComponent,
-    WidgetInputEditableComponent
+    WidgetInputEditableComponent,
+    WidgetSelectEditableComponent
   ],
   imports: [
     BrowserModule,

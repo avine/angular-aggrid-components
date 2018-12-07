@@ -29,7 +29,12 @@
 
   <ng-container matColumnDef="role">
     <mat-header-cell *matHeaderCellDef> Role </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.role}} </mat-cell>
+    <mat-cell *matCellDef="let row">
+      <app-widget-select-editable
+        [values]="roles"
+        [(value)]="row.role">
+      </app-widget-select-editable>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="disabled">

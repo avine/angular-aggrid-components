@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '@app/models/user.model';
+import { ROLES, User } from '@app/models/user.model';
 import { ApiService } from '@app/services/api.service';
 
 @Component({
@@ -17,6 +17,8 @@ export class MatGridComponent implements OnInit {
     'role',
     'disabled'
   ];
+
+  roles = ROLES;
 
   constructor(private apiService: ApiService) { }
 

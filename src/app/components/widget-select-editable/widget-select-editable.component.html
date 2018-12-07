@@ -1,0 +1,21 @@
+<ng-container *ngIf="edit; else read">
+  <mat-form-field>
+    <mat-select
+      [(value)]="value"
+      (selectionChange)="change($event.value)">
+      <mat-option
+        *ngFor="let val of values"
+        [value]="val">
+        {{ val }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</ng-container>
+
+<ng-template #read>
+  <div
+    class="widget-select-editable__read"
+    (click)="edit = true">
+    {{ value }}
+  </div>
+</ng-template>
