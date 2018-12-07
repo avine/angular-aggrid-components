@@ -1,0 +1,18 @@
+<ng-container *ngIf="edit; else read">
+  <mat-form-field class="widget-input-editable__field">
+    <input
+      matInput
+      [ngModel]="value"
+      (ngModelChange)="valueChange.emit($event)"
+      (keyup.enter)="edit = false"
+      (keyup.escape)="edit = false">
+  </mat-form-field>
+</ng-container>
+
+<ng-template #read>
+  <div
+    class="widget-input-editable__read"
+    (click)="edit = true">
+    {{ value }}
+  </div>
+</ng-template>

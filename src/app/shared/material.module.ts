@@ -9,6 +9,7 @@ import {
   MatRippleModule,
   MatSelectModule,
   MatSlideToggleModule,
+  MatTableModule
 } from '@angular/material';
 
 const components = [
@@ -21,6 +22,7 @@ const components = [
   MatRippleModule,
   MatSelectModule,
   MatSlideToggleModule,
+  MatTableModule
 ];
 
 @NgModule({

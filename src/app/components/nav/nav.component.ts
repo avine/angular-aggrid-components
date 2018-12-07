@@ -9,7 +9,8 @@ import { RoutePaths } from '@app/route-paths';
 export class NavComponent implements OnInit {
   links = [
     { path: `/${RoutePaths.V1}`, label: 'Simple' },
-    { path: `/${RoutePaths.V2}`, label: 'Advanced' }
+    { path: `/${RoutePaths.V2}`, label: 'Advanced' },
+    { path: `/${RoutePaths.MatGrid}`, label: 'Material' }
   ];
 
   constructor() { }

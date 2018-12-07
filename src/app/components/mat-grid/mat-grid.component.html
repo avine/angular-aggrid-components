@@ -1,0 +1,46 @@
+<mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef> First name </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <app-widget-input-editable
+        [(value)]="row.firstName">
+      </app-widget-input-editable>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef> Last name </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <app-widget-input-editable
+        [(value)]="row.lastName">
+      </app-widget-input-editable>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <app-widget-input-editable
+        [(value)]="row.email">
+      </app-widget-input-editable>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="role">
+    <mat-header-cell *matHeaderCellDef> Role </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.role}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="disabled">
+    <mat-header-cell *matHeaderCellDef> Disabled </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <mat-slide-toggle [(ngModel)]="row.disabled"></mat-slide-toggle>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<pre>{{ dataSource | json }}</pre>

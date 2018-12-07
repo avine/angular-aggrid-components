@@ -1,0 +1,12 @@
+:host() {
+  flex-grow: 1;
+}
+
+::ng-deep .mat-form-field-infix {
+  width: auto !important;
+}
+
+.widget-input-editable__read {
+  min-height: 2rem;
+  line-height: 2rem;
+}
